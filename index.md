@@ -7,6 +7,11 @@ documentation may be incomplete and/or out of date.**  Feel free to email
 [wiser@caltech.edu](mailto:wiser@caltech.edu) if you have any questions or
 comments.
 
+**NOTE:**  WISER can also be extended with custom functionality through its
+[plugin API](../API).
+
+This manual is for the latest version of WISER. Some features may not be available in earlier versions of WISER. Please visit the WISER download page for the latest version, or contact us if you have filled out the request form and no longer have the download link.
+
 # Overview
 
 The goal of WISER is to provide an intuitive and configurable user interface
@@ -34,9 +39,6 @@ interacting with spectral data.  These buttons are as follows:
 <img class="img_center" src="images/display_toggles.png" width="40%">
 
 These tools are described in subsequent sections.
-
-**NOTE:**  WISER can also be extended with custom functionality through its
-[plugin API](../API).
 
 ## WISER Configuration
 
@@ -118,6 +120,10 @@ mode (three bands) or grayscale mode (one band only).
 
 <img class="img_center" src="images/band_chooser.png" width="40%">
 
+When the grayscale or single band option is selected in the Band Chooser, WISER can display with a color bar or gradient.
+
+<img class ="img_center" src="images/colormap.png" width="40%">
+
 Besides letting the user select any combination of bands, the band chooser also
 exposes the ability to select the dataset's default bands, if any were
 indicated in the original data file.  Finally, if the dataset specifies
@@ -160,6 +166,18 @@ range of useful data, or to focus in on a specific range of values.
 
 For a detailed description of how WISER performs contrast stretch calculations,
 please refer to [this document](./contrast-stretch.html).
+
+# Grid View and Image Linking
+
+WISER allows simultaneous viewing of multiple images in the main window through the grid view, and images of the same size can be linked. Any grid dimensions can be input. Click the grid icon to split or unsplit the main view.
+
+<img class="img_center" src="images/grid_options.png" width="40%">
+
+Note that, once images are displayed in a grid, the band selector and contrast stretch options are available above each image and not in the main WISER toolbar.
+
+<img class="img_center" src="images/grid_view.png" width="80%">
+
+Images in the grid can only be linked if all images open in WISER have the same spatial dimensions.
 
 # Regions of Interest
 
