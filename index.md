@@ -10,8 +10,6 @@ comments.
 **NOTE:**  WISER can also be extended with custom functionality through its
 [plugin API](../API).
 
-This manual is for the latest version of WISER. Some features may not be available in earlier versions of WISER. Please visit the WISER download page for the latest version, or contact us if you have filled out the request form and no longer have the download link.
-
 # Overview
 
 The goal of WISER is to provide an intuitive and configurable user interface
