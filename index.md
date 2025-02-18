@@ -8,7 +8,7 @@ documentation may be incomplete and/or out of date.**  Feel free to email
 comments.
 
 **NOTE:**  WISER can also be extended with custom functionality through its
-[plugin API](../API).
+[plugin API](https://ehlmann-research-group.github.io/WISER-Plugin-API/).
 
 # Overview
 
