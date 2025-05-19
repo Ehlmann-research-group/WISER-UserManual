@@ -59,10 +59,9 @@ An authority identifier consists of an authority name and an authority code. An 
 coordinate reference systems. An authority code is used to access a specific spatial reference system in that organization. Together, you are
 able to easily access the parameters that describe a coordinate reference system without having to specify the full WKT string or full PROJJSON schema.
 
-The Georeferencer tool in WISER allows you to specify a coordinate reference system by the authority name and authority code. If you do not know your
-authority name or authority code but you do have the WKT string or PROJJSON schema, then you will likely be able to find your authority name and code combo.
-
-Lets go through the below example to guide you through this process. 
+The Georeferencer tool in WISER allows you to specify a coordinate reference system by the authority name and authority code. 
+![Georeferencer Ref System Creator](../images/georef_authority_code_entry.png)
+If you do not know your authority name or authority code but you do have the WKT string or PROJJSON schema, then you will likely be able to find your authority name and code combo. Lets go through the below example to guide you through this process. 
 
 Lets say I have this WKT string (found in my .hdr file):
 ```
@@ -71,20 +70,32 @@ coordinate system string = {PROJCS["UTM_Zone_11N",GEOGCS["GCS_WGS_1984",DATUM["D
 
 I see that it has UTM Zone 11N and WGS 1984 which are used to describe this reference system. I'll take just combine this to be 'UTM Zone 11N WGS 1984'
 
-I'll then go to this website https://spatialreference.org/ref/ 
+I'll then go to [this website](https://spatialreference.org/ref/) 
 ![Spatial Reference Finder Website](../images/spatial_reference_org_website.png)
 
-and enter in 'UTM Zone 11N WGS 1984'
+and enter in 'UTM Zone 11N WGS 1984' into the search bar.
 
 ![Entering descriptive string into search](../images/failed_ref_sys_search.png)
 
 Uh oh. It didn't find it. Maybe that's because I did too specific of a search. Let's try 'UTM Zone 11N WGS'
+
 ![Successful search with UTM Zone 11N WGS](../images/successful_ref_sys_search.png)
 
-And viola, I found some authority name and code combinations. I can check to make sure these match my WKT string by clicking on them
-which will navigate me to a page like this:
+And viola, I found some authority name and code combinations. I can check to make sure these match my WKT string by clicking on them. I'll be navigated to the below page. 
+
 ![EPSG:32611 Page](../images/ref_sys_page.png)
-And clicking on WKT-1 as HTML
+
+I can then click on 'WKT-1 as HTML' as you see below.
+
 ![WKT-1 As HTML Image](../images/wkt_link_click.png)
-Then I can compare the WKT string found at the URL to mine to ensure they are the same. 
+
+Then I can compare the WKT string found at the URL to my WKT string to ensure they are the same. 
+
 ![WKT string in an html page](../images/wkt_string_html.png)
+
+Lastly, I'll use the authority name and code (EPSG:32611) which was the title of the first page and
+enter this into WISER.
+
+![Entering Reference System into WISER](../images/enter_crs_into_wiser.png)
+
+And there we have it. I put the reference system into WISER.
